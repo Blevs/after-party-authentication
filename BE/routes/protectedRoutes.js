@@ -68,7 +68,7 @@ function protected(req, res, next) {
     jwt.verify(token, secret, (err, decodedToken) => {
       if (err) {
         console.log(err);
-        return res.json({
+        return res.status(401).json({
           error: true,
           message: 'You are not authorized to see this data'
         });
@@ -78,7 +78,7 @@ function protected(req, res, next) {
       }
     });
   } else {
-    return res
+    return res.status(400)
       .json({
         error: true,
         message: 'No token provided'
