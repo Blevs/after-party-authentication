@@ -90,6 +90,6 @@ and the response object will look like this:
 
 1. Styling! Make your form pretty. Research pseudo elements and event selectors. Try to find interesting ways to present and layout the data you recieve from the back end.
 
-1. Make a Login form. Compuse your Formik form in such a way that it can be extracted into a component and reused for both Register and Login.
+1. Make a Login form. Reuse your Formik form in such a way that it can be extracted into a component and reused for both Register and Login.
 
 1. Add React Router to your app and build routes for the registration form
