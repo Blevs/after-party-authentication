@@ -87,7 +87,7 @@ function protected(req, res, next) {
   }
 }
 
-router.get('/users', protected, function(req, res, next) {
+router.get('/users', function(req, res, next) {
   db('users')
     .select('id', 'username', 'password')
     .then(users => {
@@ -96,7 +96,7 @@ router.get('/users', protected, function(req, res, next) {
     .catch(next);
 });
 
-router.get('/data', protected, function(req, res, next) {
+router.get('/data', function(req, res, next) {
   res.json(data);
 });
 
