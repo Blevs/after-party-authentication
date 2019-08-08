@@ -1,6 +1,6 @@
 # Sprint Challenge: Form Management
 
-This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored form management, custom hooks, and client-side authentication.
+This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored class components and lifecycle methods, advanced form management, and unit testing.
 
 ## Instructions
 
@@ -18,21 +18,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 ## Description
 
-In the challenge for this Sprint, you will demonstrate proficiency by creating an application that has a registration page and let's you register a new user. Once a user is registered, you are returned a token that you can use in other calls to fetch data and render protected data to the DOM.
+In the challenge for this Sprint, you will demonstrate proficiency by creating an application that has a registration page and let's you register a new user. Once a user is registered, you can fetch data and render it to the DOM.
 
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
+- [ ] What are the required parts of class components?
+
+- [ ] Name at least three lifecycle methods?
+
 - [ ] Why are forms used so often in web applications and software?
 
 - [ ] What advantages are there by using a forms library like Formik?
 
-- [ ] What is stateful logic?
-
-- [ ] What is a custom hook, and what does it mean to compose hooks together?
-
-- [ ] Describe the process of retriving a token from a server and using that token in subsequent API calls.
+- [ ] Why do we write tests for our apps?
 
 ## Project Set Up
 
@@ -61,7 +61,9 @@ Your finished project must include all of the following requirements:
 
 - [ ] A registration form built with formik - include inputs for a `username` and a `password`
 - [ ] Form validation using Yup
-- [ ] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user and retrieve a token - the request body should have the following shape:
+- [ ] At least one class component (I would challenge you to make the form a class!)
+- [ ] A unit test on at least one function in your app
+- [ ] A POST request made from the registration form to `http://localhost:6000/api/register` to add a user - the request body should have the following shape:
 
 ```js
 {
@@ -80,9 +82,7 @@ and the response object will look like this:
 }
 ```
 
-- [ ] Write a custom hook that can set and retrieve this token to and from local storage
-
-- [ ] A GET request made with the token to `http://localhost:6000/api/restricted/data` to retrieve protected data
+- [ ] A GET request made with the token to `http://localhost:6000/api/restricted/data` to retrieve the data
 
 - [ ] Map over the array of objects you recieve and render some or all of it's information to the DOM.
 
@@ -92,4 +92,4 @@ and the response object will look like this:
 
 1. Make a Login form. Compuse your Formik form in such a way that it can be extracted into a component and reused for both Register and Login.
 
-1. Deep dive into validation. Can you make your register form check to see if a password is long enough? If it has special characters? Make two password fields for register and prevent the post request if the passwords don't match.
+1. Add React Router to your app and build routes for the registration form
